@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="loginpage.css">
 </head>
 <body>
+    <div id="square1"></div>
+
     <div class="loginpage">
-        <img id="logo" src="logornobg.png" width="100px" length="100px" alt="RIPT Logo"><br>
-        <form id="login" action="/home.html">
-        <label for="email">Insira seu e-mail ou nome de usuário</label><br>
-        <input type="email" name="email" required><br><br>
-        <label for="password">Insira sua senha</label><br>
-        <input type="text" name="password" required><br><br>
-        <input type="Submit" id="Submit"><br>
+        <img id="logo" src="logornobg.png" width="100px" length="100px" alt="RIPT Logo"><br><br>
+        <form id="login" action="validarlogin.php" method="post"> 
+            <label for="email"><b>E-mail</b></label><br>
+            <input type="email" name="email" id="email" placeholder="Insira seu E-mail" required><br><br>
+
+            <label for="password"><b>Senha</b></label><br>
+            <input type="password" name="password" id="password" placeholder="Insira sua senha" required><br><br>
+
+            <button type="submit" value="Submit" id="loginbutton">Login</button><br>
+            
+            <label>
+                <input type="checkbox" name="remember"> Manter conectado
+            </label><br>
+
+            <p><a href="/home.html">Esqueceu sua senha?</a></p>
         </form>
     </div>
 </body>
